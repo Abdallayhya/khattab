@@ -57,10 +57,25 @@ $("#copy").onclick = async () => {
   setTimeout(() => t.classList.remove("show"), 1800);
 };
 
-// Form -> WhatsApp
-$("#form").onsubmit = e => {
+// Form -> Telegram bot (falls back to WhatsApp if sending fails)
+const BOT_TOKEN = "8832097213:AAF810LzShZRPtxdZ8L5ShS6tmz-DSUC_mk";
+const CHAT_ID = "6458147839";
+$("#form").onsubmit = async e => {
   e.preventDefault();
-  const f = new FormData(e.target);
-  const msg = `السلام عليكم، أريد الاشتراك في حلقات حفظ القرآن أونلاين.\nالاسم: ${f.get("name")}\nالسن: ${f.get("age") || "-"}\nالمستوى: ${f.get("level")}\n${f.get("msg") || ""}`;
-  open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank");
+  const f = new FormData(e.target), st = $("#formstatus"), btn = e.target.querySelector("button");
+  const text = `طلب اشتراك جديد من الموقع\nالاسم: ${f.get("name")}\nالسن: ${f.get("age") || "-"}\nالمستوى: ${f.get("level")}\nالرسالة: ${f.get("msg") || "-"}`;
+  btn.disabled = true; st.textContent = "جاري الإرسال...";
+  try {
+    const r = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: CHAT_ID, text })
+    });
+    if (!r.ok) throw new Error(r.status);
+    st.textContent = "تم إرسال بياناتك بنجاح، سنتواصل معك قريباً بإذن الله ✓";
+    e.target.reset();
+  } catch (err) {
+    st.textContent = "تعذر الإرسال، سيتم فتح واتساب لإرسال بياناتك.";
+    open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(text), "_blank");
+  }
+  btn.disabled = false;
 };
