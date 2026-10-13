@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  موقع الشيخ خطاب الأزهري  |  صفحة شخصية (HTML + CSS + JS فقط)
+  ----------------------------------------------------------------------------
+  الملفات: index.html / style.css / script.js
+
+  كيف تُعدّل بياناتك بسهولة؟
+  1) الاسم:       ابحث عن "الشيخ خطاب الأزهري" واستبدله باسمك.
+  2) الأرقام:     ابحث عن 01277588280  (واتساب/تيليجرام/مكالمة)
+                  وابحث عن 01031457178  (فودافون كاش).
+                  ملاحظة: في روابط واتساب/تيليجرام يُكتب الرقم بصيغة دولية
+                  بدون + مثال: 201277588280.
+  3) سنوات الخبرة: عدّل data-target في قسم (الأرقام) داخل index.html.
+  4) لا توجد تزكيات أو أعداد طلاب مزيفة؛ التزم بالحقائق فقط.
+  5) الألوان: من أعلى style.css داخل :root عدّل المتغيّرات (--green / --gold...).
+  ============================================================================
+-->
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الشيخ خطاب الأزهري | حفظ القرآن الكريم أونلاين وحضورياً</title>
+  <meta name="description" content="الشيخ خطاب الأزهري — حافظ للقرآن الكريم كاملاً وطالب بكلية أزهرية. تحفيظ القرآن الكريم وتصحيح التلاوة لجميع الأعمار، خبرة 8 سنوات حضورياً و2.5 سنة أونلاين. سجّل الآن لتبدأ رحلتك مع كتاب الله." />
+  <meta name="author" content="الشيخ خطاب الأزهري" />
+  <meta name="theme-color" content="#0f5132" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="الشيخ خطاب الأزهري | حفظ القرآن الكريم" />
+  <meta property="og:description" content="حافظ للقرآن الكريم كاملاً وطالب بكلية أزهرية. تحفيظ القرآن وتصحيح التلاوة لجميع الأعمار — خبرة 8 سنوات حضورياً و2.5 سنة أونلاين." />
+  <meta property="og:locale" content="ar_EG" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5132'/%3E%3Cpath d='M20 18h10a8 8 0 018 8v22a6 6 0 00-6-6H20z' fill='none' stroke='%23c9a227' stroke-width='3'/%3E%3Cpath d='M44 18H34a8 8 0 00-8 8v22a6 6 0 016-6h12z' fill='none' stroke='%23c9a227' stroke-width='3'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Cairo (body) + Amiri (headings / Quranic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;800&family=Reem+Kufi:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== شريط التنقّل ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="الشيخ خطاب الأزهري - الرئيسية">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="34" height="34" role="img" aria-hidden="true">
+            <path d="M14 12h10a8 8 0 018 8v18a6 6 0 00-6-6H14z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M34 12H24a8 8 0 00-8 8v18a6 6 0 016-6h12z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M24 20v18" stroke="currentColor" stroke-width="2.6"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>الشيخ خطاب الأزهري</strong>
+          <small>تحفيظ القرآن الكريم</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="روابط التنقل">
+        <a href="#home" class="nav-link active">الرئيسية</a>
+        <a href="#about" class="nav-link">من أنا</a>
+        <a href="#services" class="nav-link">خدماتي</a>
+        <a href="#experience" class="nav-link">الخبرة</a>
+        <a href="#start" class="nav-link">كيف تبدأ</a>
+        <a href="#faq" class="nav-link">الأسئلة الشائعة</a>
+        <a href="#contact" class="nav-link">تواصل معي</a>
+        <a href="#contact" class="btn btn-primary nav-cta">سجّل الآن</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="تبديل الوضع الليلي" title="الوضع الليلي">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z" fill="currentColor"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></g></svg>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== الواجهة الرئيسية ===================== -->
+    <section class="hero" id="home">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <span class="hero-badge">بسم الله الرحمن الرحيم</span>
+          <h1 class="hero-title">الشيخ خطاب الأزهري</h1>
+          <p class="hero-tagline">رفيقك في رحلة حفظ كتاب الله</p>
+          <p class="hero-desc">
+            حافظ للقرآن الكريم كاملاً &nbsp;•&nbsp; طالب بكلية أزهرية &nbsp;•&nbsp;
+            خبرة 8 سنوات في التحفيظ حضورياً و 2.5 سنة أونلاين &nbsp;•&nbsp; لجميع الأعمار
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">اشترك الآن</a>
+            <a href="https://wa.me/201277588280?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%E2%80%8C%20%D9%8A%D8%A7%20%D8%B4%D9%8A%D8%AE%20%D8%AE%D8%B7%D8%A7%D8%A8%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D8%AD%D9%84%D9%82%D8%A7%D8%AA%20%D8%AD%D9%81%D8%B0%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86." class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 3.9A18 18 0 0015.7 2.5a13 13 0 00-.6 1.3 16 16 0 00-6.2 0A13 13 0 008.3 2.5 18 18 0 004 3.9C1.5 7.6.9 11.2 1.2 14.8A18 18 0 006.7 17.6l.9-1.5c-.8-.3-1.5-.7-2.1-1.2l.5-.4a13 13 0 0012 0l.5.4c-.6.5-1.3.9-2.1 1.2l.9 1.5a18 18 0 005.5-2.8c.4-4.2-.6-7.8-2.8-10.9zM8.7 12.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z" fill="currentColor"/></svg>
+              تواصل واتساب
+            </a>
+          </div>
+
+          <figure class="hero-verse">
+            <blockquote>وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ</blockquote>
+            <figcaption>سورة القمر</figcaption>
+          </figure>
+        </div>
+
+        <div class="hero-illustration reveal" aria-hidden="true">
+          <svg viewBox="0 0 420 420" role="img" aria-label="رسم رمزي: مصحف ومسجد وهلال">
+            <defs>
+              <linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#14532d"/><stop offset="1" stop-color="#0f5132"/>
+              </linearGradient>
+              <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#e6c765"/><stop offset="1" stop-color="#c9a227"/>
+              </linearGradient>
+            </defs>
+
+            <!-- دائرة خلفية ونجمة زخرفية -->
+            <circle cx="210" cy="200" r="150" fill="url(#gGreen)" opacity="0.10"/>
+            <circle cx="210" cy="200" r="150" fill="none" stroke="url(#gGold)" stroke-width="2" opacity="0.6"/>
+            <g fill="none" stroke="url(#gGold)" stroke-width="2" opacity="0.55">
+              <path d="M210 90l14 34 36 4-27 24 8 35-31-18-31 18 8-35-27-24 36-4z"/>
+            </g>
+
+            <!-- هلال -->
+            <path d="M300 96a44 44 0 10-40 60 34 34 0 1140-60z" fill="url(#gGold)"/>
+            <circle cx="266" cy="78" r="4" fill="url(#gGold)"/>
+            <circle cx="338" cy="120" r="3" fill="url(#gGold)"/>
+            <circle cx="320" cy="58" r="2.5" fill="url(#gGold)"/>
+
+            <!-- مئذنة ومسجد مبسّط -->
+            <g fill="url(#gGreen)" opacity="0.85">
+              <rect x="85" y="235" width="14" height="70" rx="3"/>
+              <rect x="120" y="255" width="90" height="50" rx="6"/>
+              <path d="M120 255a45 30 0 0190 0z"/>
+              <circle cx="165" cy="223" r="6"/>
+            </g>
+
+            <!-- المصحف على الرِّحال -->
+            <g transform="translate(210 320)">
+              <rect x="-90" y="-8" width="180" height="14" rx="6" fill="url(#gGold)" opacity="0.9"/>
+              <path d="M-8 -8L-70 60h40L-8 10z" fill="#0f5132"/>
+              <path d="M8 -8L70 60h-40L8 10z" fill="#0f5132"/>
+              <path d="M-70 -30h60a10 10 0 0110 10v14a6 6 0 00-6-6h-64z" fill="#faf7ef" stroke="url(#gGold)" stroke-width="2"/>
+              <path d="M70 -30H10a10 10 0 00-10 10v14a6 6 0 016-6h64z" fill="#faf7ef" stroke="url(#gGold)" stroke-width="2"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== أرقام وإحصاءات ===================== -->
+    <section class="stats" aria-label="الأرقام والخبرات">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <span class="stat-number" data-target="8" data-decimals="0">0</span>
+            <span class="stat-suffix">سنوات</span>
+            <span class="stat-label">تحفيظ حضورياً</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-number" data-target="2.5" data-decimals="1">0</span>
+            <span class="stat-suffix">سنة</span>
+            <span class="stat-label">تحفيظ أونلاين</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-number" data-target="30" data-decimals="0">0</span>
+            <span class="stat-suffix">جزءاً</span>
+            <span class="stat-label">ختمة كاملة للقرآن</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-number stat-symbol">∞</span>
+            <span class="stat-suffix">لكل</span>
+            <span class="stat-label">الأعمار والمستويات</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== من أنا ===================== -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <span class="eyebrow">من أنا</span>
+          <h2 class="section-title">حافظٌ لكتاب الله، وشغوفٌ بتعليمه</h2>
+          <p>
+            السلام عليكم ورحمة الله وبركاته. أنا خطاب الأزهري، طالب بكلية أزهرية،
+            منّ اللهُ عليّ بختم القرآن الكريم كاملاً وحفظه حفظاً متقناً، وأسأل الله
+            أن يجعلني من أهله وخاصته.
+          </p>
+          <p>
+            على مدار <strong>ثماني سنوات</strong> في التحفيظ حضورياً، و
+            <strong>سنتين ونصف</strong> في التحفيظ أونلاين، صاحبتُ طلاباً
+            من مختلف الأعمار: أطفالاً وفتياناً وكباراً ومبتدئين، ووجدتُ في تعليم
+            كتاب الله متعةً لا تُوصف. أحرص على أسلوبٍ صبورٍ مبسّطٍ يراعي الفروق
+            بين الطلاب، ويجعل الحفظ عبادةً محبوبةً لا مهمّةً ثقيلة.
+          </p>
+          <ul class="about-points">
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              حفظٌ متقنٌ للقرآن الكريم كاملاً بفضل الله.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              خبرة حقيقية مع الأطفال والفتيان والكبار.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              متابعة يومية ومراجعة مستمرة للحفظ.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              مرونةٌ في المواعيد تناسب الأونلاين من أي مكان.
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">ابدأ معي الآن</a>
+        </div>
+
+        <aside class="about-card reveal" aria-label="بطاقة تعريفية">
+          <div class="about-card-pattern" aria-hidden="true"></div>
+          <div class="about-avatar" aria-hidden="true">
+            <svg viewBox="0 0 100 100" role="img" aria-label="أيقونة">
+              <circle cx="50" cy="36" r="18" fill="none" stroke="currentColor" stroke-width="3"/>
+              <path d="M20 88a30 30 0 0160 0z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>خطاب الأزهري</h3>
+          <p class="about-role">حافظ للقرآن الكريم • طالب بكلية أزهرية</p>
+          <div class="about-mini-stats">
+            <div><strong>8</strong><span>سنوات حضورياً</span></div>
+            <div><strong>2.5</strong><span>سنة أونلاين</span></div>
+          </div>
+          <a href="https://wa.me/201277588280" class="btn btn-outline btn-block" target="_blank" rel="noopener">تواصل معي واتساب</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== خدماتي ===================== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">خدماتي</span>
+          <h2 class="section-title">ماذا أقدّم لك؟</h2>
+          <p class="section-subtitle">برامج تحفيظ ومتابعة تناسب كل فئة وكل مستوى بإذن الله.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21a8 8 0 0116 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>حفظ القرآن للأطفال</h3>
+            <p>أسلوب مبسّط ومحبّب للأطفال، مع تشجيعٍ ومتابعةٍ تجعل الحفظ رحلةً ممتعة.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>حفظ للكبار والمبتدئين</h3>
+            <p>لا يهم عمرك أو مستواك؛ نبدأ من حيث أنت بخطة واضحة تناسب وقتك وقدرتك.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M20 11A8 8 0 004 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 11l-3-3m3 3l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 13a8 8 0 0016 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 13l3 3m-3-3l-3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>مراجعة وتثبيت المحفوظ</h3>
+            <p>جدول مراجعة منظّم يثبّت ما حفظته ويمنع نسيانه بإذن الله.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 15c3-1 6-1 8 1s6 2 8 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 9c3-1 6-1 8 1s6 2 8 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="5" r="2" fill="currentColor"/></svg>
+            </span>
+            <h3>تصحيح التلاوة والتجويد</h3>
+            <p>تصحيح النطق وأحكام التجويد الأساسية لقراءةٍ صحيحةٍ متقنة.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 14l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>متابعة يومية وتقييم مستمر</h3>
+            <p>متابعة يومية لما حفظته، مع تقييمٍ دوري يوضّح تقدّمك وخطتك القادمة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== الخبرة (الخط الزمني) ===================== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">الخبرة</span>
+          <h2 class="section-title">رحلتي في تعليم كتاب الله</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <span class="timeline-when">8 سنوات</span>
+              <h3>التحفيظ الحضوري (أوفلاين)</h3>
+              <p>ثماني سنوات من تعليم القرآن الكريم حضورياً لطلابٍ من أعمارٍ ومستوياتٍ مختلفة.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <span class="timeline-when">2.5 سنة</span>
+              <h3>التحفيظ أونلاين</h3>
+              <p>سنتان ونصف من الحلقات والمتابعة عن بُعد، تصل لطلابٍ من أي مكان بسهولة.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <span class="timeline-when">الآن</span>
+              <h3>أستقبل طلاباً جدداً أونلاين</h3>
+              <p>بابُ التسجيل مفتوحٌ لحلقات التحفيظ والمراجعة عن بُعد — فتواصل معي لنبدأ.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== كيف تبدأ ===================== -->
+    <section class="section start" id="start">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">كيف تبدأ؟</span>
+          <h2 class="section-title">أربع خطوات فقط</h2>
+          <p class="section-subtitle">رحلة الحفظ أبسط مما تتخيّل — لنبدأ خطوةً بخطوة.</p>
+        </header>
+
+        <div class="steps-grid">
+          <div class="step reveal">
+            <span class="step-num">1</span>
+            <h3>تواصل معي</h3>
+            <p>راسلني عبر واتساب أو تيليجرام وأخبرني برغبتك في الحفظ.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">2</span>
+            <h3>حدّد مستواك وهدفك</h3>
+            <p>نتعرّف معاً على مستواك الحالي وما تطمح إليه من حفظٍ ومراجعة.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">3</span>
+            <h3>نتفق على الخطة</h3>
+            <p>نتفق على المواعيد المناسبة لك وعلى خطة الحفظ والمتابعة.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">4</span>
+            <h3>ابدأ رحلة الحفظ</h3>
+            <p>تبدأ الحلقات والمتابعة اليومية، وتسير خطوةً بخطوة نحو الختمة بإذن الله.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== لماذا تختارني ===================== -->
+    <section class="section features" aria-label="لماذا تختارني">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">لماذا تختارني؟</span>
+          <h2 class="section-title">معك في كل خطوة</h2>
+        </header>
+
+        <div class="features-grid">
+          <div class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 3a9 9 0 109 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 3v9l6 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>صبر وأسلوب مبسّط</h3>
+            <p>أراعي الفروق بين الطلاب وأصبر على كل مستوى حتى يتحقّق التقدّم.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>مرونة في المواعيد</h3>
+            <p>نختار معاً الأوقات التي تناسبك، خاصةً في الحلقات الأونلاين.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 12l5 5L20 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>متابعة مستمرة</h3>
+            <p>متابعةٌ يوميةٌ لما تحفظه، فلا تدع النسيان يسرق تعبك.</p>
+          </div>
+          <div class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2l7 3v6c0 5-3.5 8.5-7 11-3.5-2.5-7-6-7-11V5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>خبرة مع كل الأعمار</h3>
+            <p>تعاملت مع الأطفال والفتيان والكبار، ولكلٍّ أسلوبه المناسب.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== الأسئلة الشائعة ===================== -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">الأسئلة الشائعة</span>
+          <h2 class="section-title">كل ما قد يخطر ببالك</h2>
+        </header>
+
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>هل التحفيظ مناسب للأطفال؟</span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer"><p>نعم، بإذن الله. أتعامل مع الأطفال بأسلوب مبسّط ومشجّع يراعي طبيعتهم، مع متابعةٍ مستمرة وجرعاتٍ صغيرة تجعل الحفظ محبوباً لديهم.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>هل أحتاج خبرة سابقة في الحفظ؟</span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer"><p>لا، لست بحاجةٍ لأي خبرة سابقة. نبدأ من مستواك الذي أنت عليه، سواءٌ كنت مبتدئاً تماماً أو لديك بعض المحفوظ.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>كيف تتم الحصة أونلاين؟</span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer"><p>تتم الحصة عبر مكالمة صوتية أو مرئية حسبما يناسبك، نقرأ فيها ونتصفح المحفوظ، مع تصحيحٍ مباشر وتوضيحٍ للأحكام، ثم تحدّد لك جرعة الحفظ للمراجعة.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>ما البرنامج المستخدم في الحلقات؟</span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer"><p>نستخدم وسيلة تواصلٍ بسيطة ومتاحة للجميع (مثل واتساب أو تيليجرام أو أي برنامج مكالمات مناسب)، نتفق عليها معاً عند بداية الاشتراك.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>كيف يتم الدفع؟</span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer"><p>يمكن الدفع عبر فودافون كاش على الرقم الموجود في قسم التواصل، ونتفق على التفاصيل والمبلغ عند تحديد الخطة والمواعيد.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>هل يمكن أن تكون هناك حصة تجريبية؟</span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer"><p>تواصل معي ونتحدث عن الأمر، ويمكننا الاتفاق على حصةٍ تعريفية نتعرف فيها على مستواك وطريقة العمل لتطمئن قبل الاشتراك بإذن الله.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== تواصل معي ===================== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">تواصل معي</span>
+          <h2 class="section-title">لنبدأ رحلتك مع كتاب الله</h2>
+          <p class="section-subtitle">اختر وسيلة التواصل الأنسب لك، وأنا في خدمتك بإذن الله.</p>
+        </header>
+
+        <div class="contact-grid">
+          <a class="contact-card whatsapp reveal" href="https://wa.me/201277588280?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%E2%80%8C%20%D9%8A%D8%A7%20%D8%B4%D9%8A%D8%AE%20%D8%AE%D8%B7%D8%A7%D8%A8%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D8%AD%D9%84%D9%82%D8%A7%D8%AA%20%D8%AD%D9%81%D8%B8%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86." target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path d="M20 3.9A18 18 0 0015.7 2.5a13 13 0 00-.6 1.3 16 16 0 00-6.2 0A13 13 0 008.3 2.5 18 18 0 004 3.9C1.5 7.6.9 11.2 1.2 14.8A18 18 0 006.7 17.6l.9-1.5c-.8-.3-1.5-.7-2.1-1.2l.5-.4a13 13 0 0012 0l.5.4c-.6.5-1.3.9-2.1 1.2l.9 1.5a18 18 0 005.5-2.8c.4-4.2-.6-7.8-2.8-10.9z" fill="currentColor"/></svg>
+            </span>
+            <span class="contact-body">
+              <strong>واتساب</strong>
+              <span class="contact-num">01277588280</span>
+            </span>
+            <span class="contact-go" aria-hidden="true">←</span>
+          </a>
+
+          <a class="contact-card telegram reveal" href="https://t.me/+201277588280" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path d="M21.9 4.3L2.9 11.6c-1 .4-1 1.7.1 2l4.6 1.4 1.7 5.4c.3.9 1.4 1.1 2 .4l2.5-2.4 4.6 3.4c.8.5 1.8.1 2-.8l3-14.4c.2-1-.8-1.8-1.5-1.5zM9.6 14.4l8-5-6.2 6.1-.2 3z" fill="currentColor"/></svg>
+            </span>
+            <span class="contact-body">
+              <strong>تيليجرام</strong>
+              <span class="contact-num">01277588280</span>
+            </span>
+            <span class="contact-go" aria-hidden="true">←</span>
+          </a>
+
+          <a class="contact-card call reveal" href="tel:+201277588280">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z" fill="currentColor"/></svg>
+            </span>
+            <span class="contact-body">
+              <strong>مكالمة هاتفية</strong>
+              <span class="contact-num">01277588280</span>
+            </span>
+            <span class="contact-go" aria-hidden="true">←</span>
+          </a>
+
+          <div class="contact-card vodafone reveal">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30"><rect x="2.5" y="6" width="19" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 10h19" stroke="currentColor" stroke-width="2"/><rect x="15" y="12.5" width="4" height="3" rx="1" fill="currentColor"/></svg>
+            </span>
+            <span class="contact-body">
+              <strong>فودافون كاش</strong>
+              <span class="contact-num" id="vodafoneNumber">01031457178</span>
+            </span>
+            <button class="btn btn-outline btn-copy" id="copyVodafone" type="button" data-copy="01031457178" aria-label="نسخ رقم فودافون كاش">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 15H5a2 2 0 01-2-2V5a2 2 0 012-2h8a2 2 0 012 2v1" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              نسخ الرقم
+            </button>
+          </div>
+        </div>
+
+        <!-- نموذج تواصل يرسل عبر واتساب -->
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <h3>أو أرسل بياناتك مباشرةً عبر واتساب</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fName">الاسم</label>
+              <input type="text" id="fName" name="name" required autocomplete="name" placeholder="اسمك الكامل" />
+            </div>
+            <div class="form-group">
+              <label for="fAge">العمر</label>
+              <input type="number" id="fAge" name="age" min="4" max="100" placeholder="مثال: 12" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fLevel">المستوى</label>
+            <select id="fLevel" name="level">
+              <option value="مبتدئ (لا أحفظ شيئاً)">مبتدئ (لا أحفظ شيئاً)</option>
+              <option value="أحفظ أجزاءً متفرقة">أحفظ أجزاءً متفرقة</option>
+              <option value="أراجع وأثبّت محفوظي">أراجع وأثبّت محفوظي</option>
+              <option value="طالب حفظ جديد">طالب حفظ جديد</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fMessage">رسالتك (اختياري)</label>
+            <textarea id="fMessage" name="message" rows="3" placeholder="اكتب ما تحب أن تخبرني به عن هدفك أو مواعيدك المناسبة..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22 2L11 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 2l-7 20-4-9-9-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            إرسال عبر واتساب
+          </button>
+          <p class="form-hint">سيتم فتح واتساب برسالةٍ جاهزة تحتوي على بياناتك، ثم اضغط إرسال.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== الفوتر ===================== -->
+  <footer class="footer">
+    <div class="footer-pattern" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand brand-footer">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="30" height="30"><path d="M14 12h10a8 8 0 018 8v18a6 6 0 00-6-6H14z" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M34 12H24a8 8 0 00-8 8v18a6 6 0 016-6h12z" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>
+          </span>
+          <span class="brand-text"><strong>الشيخ خطاب الأزهري</strong><small>تحفيظ القرآن الكريم</small></span>
+        </div>
+        <p class="footer-dua">«اللهم اجعل القرآن ربيع قلوبنا، ونور صدورنا، وجَلاء همومنا»</p>
+      </div>
+
+      <nav class="footer-col" aria-label="روابط سريعة">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#about">من أنا</a></li>
+          <li><a href="#services">خدماتي</a></li>
+          <li><a href="#experience">الخبرة</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>تواصل معي</h4>
+        <ul class="footer-contact">
+          <li><a href="https://wa.me/201277588280" target="_blank" rel="noopener">واتساب: 01277588280</a></li>
+          <li><a href="https://t.me/+201277588280" target="_blank" rel="noopener">تيليجرام: 01277588280</a></li>
+          <li><a href="tel:+201277588280">مكالمة: 01277588280</a></li>
+          <li><span>فودافون كاش: 01031457178</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> الشيخ خطاب الأزهري — جميع الحقوق محفوظة.</p>
+      <p>صُنع بحبٍّ لخدمة كتاب الله.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== أزرار عائمة ===================== -->
+  <a href="https://wa.me/201277588280" class="whatsapp-float" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M20 3.9A18 18 0 0015.7 2.5a13 13 0 00-.6 1.3 16 16 0 00-6.2 0A13 13 0 008.3 2.5 18 18 0 004 3.9C1.5 7.6.9 11.2 1.2 14.8A18 18 0 006.7 17.6l.9-1.5c-.8-.3-1.5-.7-2.1-1.2l.5-.4a13 13 0 0012 0l.5.4c-.6.5-1.3.9-2.1 1.2l.9 1.5a18 18 0 005.5-2.8c.4-4.2-.6-7.8-2.8-10.9zM8.7 12.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z" fill="currentColor"/></svg>
+  </a>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="العودة للأعلى">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- إشعار النسخ -->
+  <div class="toast" id="toast" role="status" aria-live="polite">تم النسخ ✓</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
